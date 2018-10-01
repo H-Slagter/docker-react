@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run hslagter/docker-react npm run test -- --coverage
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "eur-bla-bla"
+#   app: "docker-frontend"
+#   env: "Docker-frontend-env"
+#   bucket_name: "elasticbeanstalk-region-name..."
+#   bucker_path: "docker-frontend"  # same as app name
+    # on:
+    #   branch: master
+    # access_key_id: $AWS_ACCESS_KEY  # Configured in Travis CI
+    # secret_access_key:
+    #   secure: "$AWS_SECRET_KEY"  # Configured in Travis CI
